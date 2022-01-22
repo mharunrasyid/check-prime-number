@@ -1,0 +1,210 @@
+$primary: #22252D;
+$secondary: #292D36;
+$secondary-light: rgb(94, 94, 94);
+$success: #60B760;
+$danger: #e4545b;
+$blue-light: #51637e;
+$white: white;
+$white-light: rgba(255, 255, 255, 0.7);
+$grey-light: rgba(128, 128, 128, 0.2);
+
+@mixin setWitdhCenter($w, $mxw) {
+    width: $w;
+    max-width: $mxw;
+    margin: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    background: $secondary;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.input {
+    padding: .75rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    outline: none;
+}
+
+.btn {
+    padding: .5rem 1.6rem;
+    border-radius: 3px;
+    border-width: 1px;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &--secondary {
+        background: $secondary-light;
+        border-color: $secondary-light;
+        color: $white !important;
+    }
+
+    &--success {
+        background: $success;
+        border-color: $success;
+        color: $white !important;
+    }
+
+    &--danger {
+        background: $danger;
+        border-color: $danger;
+        color: $white !important;
+    }
+}
+
+.header {
+    background: $primary;
+    text-align: center;
+    padding: .8rem 1.2rem 1.3rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__txt {
+        font-size: 2.1rem;
+        color: $white-light;
+    }
+}
+
+.card {
+    background: $primary;
+    @include setWitdhCenter(75%, 30rem);
+    border-radius: .4rem;
+    padding: 1.2rem;
+
+    &__header {
+        text-align: center;
+        font-size: 1.2rem;
+        padding-bottom: 1.2rem;
+        border-bottom: 1px solid $grey-light;
+        color: $white-light;
+    }
+
+    &__form {
+        padding: 1rem 0;
+    }
+
+    &__input {
+        width: 100%;
+        font-size: 1rem;
+        margin: .4rem 0;
+        color: $secondary-light;
+        box-sizing: border-box;
+    }
+
+    &__btn {
+        margin: 0 5px;
+
+        &-group {
+            display: flex;
+            justify-content: center;
+            margin-top: .9rem;
+        }
+    }
+}
+
+.switch {
+    margin-left: 20px;
+    display: flex;
+    width: 180px;
+    align-items: center;
+
+    &__input {
+        display: none;
+    }
+
+    &__txt {
+        margin-left: 10px;
+        color: $white;
+        font-size: 14px;
+    }
+
+    &__label {
+        width: 18px;
+        height: 18px;
+        background: $white;
+        position: absolute;
+        top: -1.31px;
+        left: 0;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all .2s ease;
+
+        &-container {
+            width: 40px;
+            height: 16px;
+            border: 4px solid $blue-light;
+            border-radius: 50px;
+            position: relative;
+            background: $primary;
+            transition: all .2s ease;
+        }
+    }
+}
+
+.popup {
+    @include setWitdhCenter(75%, 30rem);
+    background: $secondary;
+    display: flex;
+    flex-direction: column;
+    color: $white;
+
+    &__container {
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        transition: all .3s ease;
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+
+    &__btn {
+        margin: 20px 0 0 auto;
+    }
+
+    &--hide {
+        transform: scale(.2);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.footer {
+    background: $primary;
+    width: 100%;
+    padding: 1.2rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: $white;
+
+
+    &__link {
+        color: $white-light;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek Bilangan Prima</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="reset">
+    <div class="container">
+      <header class="header">
+        <h1 class="header__txt">Cek Bilangan Prima</h1>
+        <div class="switch">
+          <input type="checkbox" id="switch" class="switch__input" />
+          <div for="switch" class="switch__label-container">
+            <label class="switch__label" for="switch"></label>
+          </div>
+          <div
+            class="switch__txt"
+            title="Mode Kurang menampilkan satu angka yang bisa dibagi"
+          >
+            Mode Kurang
+            <i class="fas fa-question-circle" style="margin-left: 3px"></i>
+          </div>
+        </div>
+      </header>
+      <div class="card">
+        <div class="card__header">
+          Silahkan Ketik Angka Pada Input Di Bawah Ini !
+        </div>
+        <form class="card__form">
+          <input
+            type="number"
+            name="input"
+            class="card__input input"
+            placeholder="Ketikkan Angka, contoh: 12"
+            required
+          />
+          <div class="card__btn-group">
+            <button
+              type="button"
+              class="card__btn card__btn--clear btn btn--danger"
+            >
+              <i class="fas fa-ban" style="margin-right: 2px"></i>
+              Bersihkan
+            </button>
+            <button type="submit" class="card__btn btn btn--success">
+              <i class="fas fa-check" style="margin-right: 3px"></i>
+              Cek
+            </button>
+          </div>
+        </form>
+      </div>
+      <footer class="footer">
+        © Copyright 2022 Build with ❤️ By
+        <a
+          href="https://www.instagram.com/its.rasyid_/"
+          target="_blank"
+          class="footer__link"
+          >Rasyid</a
+        >
+      </footer>
+    </div>
+    <div class="popup__container popup--hide">
+      <div class="card popup">
+        <div class="popup__txt"></div>
+        <button class="popup__btn btn btn--secondary">
+          <i class="far fa-times-circle" style="margin-right: 2px"></i>
+          Close
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
