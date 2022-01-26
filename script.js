@@ -23,7 +23,7 @@ let notPrimeNum = 0;
 let primeMsg;
 let mode = false;
 
-function itsPrime(param) {
+function isPrime(param) {
   let continueCheck = true;
   for (let i = 2; i <= param; i++) {
     if (param % i == 0) {
@@ -63,7 +63,7 @@ function clearInput() {
 }
 
 function popupMsg() {
-  let checkPrime = itsPrime(Number(iptPrime.value));
+  let checkPrime = isPrime(Number(iptPrime.value));
 
   if (checkPrime === true) {
     primeMsg = `${iptPrime.value} adalah <b><i style="color: rgba(255, 255, 255, 0.8);">bilangan prima</i></b> ✅`;

@@ -8,9 +8,9 @@ $white: white;
 $white-light: rgba(255, 255, 255, 0.7);
 $grey-light: rgba(128, 128, 128, 0.2);
 
-@mixin setWitdhCenter($w, $mxw) {
-    width: $w;
-    max-width: $mxw;
+@mixin setWitdhCenter($a, $b) {
+    width: $a;
+    max-width: $b;
     margin: auto;
 }
 
